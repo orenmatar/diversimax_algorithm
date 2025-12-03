@@ -1,0 +1,15 @@
+[project]
+name = "diversimax"
+version = "0.1.0"
+description = "Diversity optimization algorithm for Sortition of Citizen Assemblies"
+authors = [{name = "Oren Matar", email = "oren.matar@gmail.com"}]
+dependencies = [
+    "pandas",
+    "numpy",
+    "mip",
+    "scikit-learn"
+]
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
