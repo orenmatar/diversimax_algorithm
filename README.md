@@ -48,7 +48,7 @@ DiversiMax requires two CSV files:
 
 ### 1. Participants Pool File
 
-Contains demographic information for all potential participants. Must include a `participating` column (or your custom column name) with values: `"yes"`, `"no"`, or `"?"`.
+Contains demographic information for all potential participants. Must include a `participating` column (or your custom column name) with values: `"yes"`, `"no"`, or `"?"`. This can be used if resampling is needed after pool members are contacted for confirmation, and some drop out: simply indicate the status of each pool member, and the algorithm will create a new sample which will respect the members' responses.
 
 **Example:**
 ```csv
