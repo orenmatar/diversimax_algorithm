@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiversiMax: Maximizing Diversity in Sortition-Based Citizen Assemblies</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/comparison-component.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">Diversimax: Maximizing Intersectional Diversity in Sortition</h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                Oren Matar
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><a href="https://www.democracy3.org.il/eng">Democracy 3.0</a></span>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <span class="link-block">
+                                    <a href="https://github.com/orenmatar/diversimax_algorithm" 
+                                       class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-white">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Sortition algorithms select citizens assembly panels from a pool of eligible candidates while satisfying demographic quotas that mirror the broader population. However, multiple panel compositions can satisfy the same quota constraints, requiring additional criteria to select between them. We introduce Diversimax, an algorithm that maximizes intersectional diversity - promoting representation across combinations of demographic categories (e.g., age × gender × education), not just within individual categories. Using mixed integer programming, Diversimax balances representation across all demographic intersections, minimizing disparities between well-represented and underrepresented groups. When applied to data from municipal citizens assemblies conducted in Israel, Diversimax achieves lower Gini coefficients across intersections and reduces the number of unrepresented identities compared to commonly used alternative algorithms, while maintaining identical quota compliance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-gray">
+        <div class="container is-max-widescreen">
+            <div class="container is-max-desktop">
+                <h2 class="title is-3 has-text-centered">Comparing Diversimax to Leximin</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        Different algorithms can produce substantially different panels while satisfying identical quota constraints. To demonstrate this, we compare Diversimax to Leximin (Flanigan et al. 2021), a commonly used sortition algorithm that prioritizes "fairness." Both algorithms were applied to data from Israeli municipal citizens assemblies in Ra'anana and Kfar Saba.
+                    </p>
+                    <p>
+                        The visualizations below show how participants are distributed across demographic intersections in panels selected by each algorithm.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Interactive Comparison Component -->
+            <div id="comparison-container">
+                <div class="controls">
+                    <label for="datasetSelect">Select Dimensions for Comparison:</label>
+                    <select id="datasetSelect"></select>
+                </div>
+                
+                <div class="comment-section" id="commentSection"></div>
+                
+                <div class="comparison-wrapper">
+                    <div class="algorithm-section" id="diversimaxSection">
+                        <div class="algorithm-title">Diversimax</div>
+                        <div class="table-container" id="diversimaxTable"></div>
+                        <div class="stats-grid" id="diversimaxStats"></div>
+                    </div>
+                    
+                    <div class="algorithm-section" id="leximinSection">
+                        <div class="algorithm-title">Leximin</div>
+                        <div class="table-container" id="leximinTable"></div>
+                        <div class="stats-grid" id="leximinStats"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container is-max-desktop">
+                <div class="content has-text-justified" style="margin-top: 2rem;">
+                    <p>
+                        Diversimax consistently achieves lower Gini coefficients across all intersections, indicating more balanced representation. This results in fewer empty cells - fewer unique identities left unrepresented in the deliberation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-white">
+        <div class="container is-max-desktop">
+            <h2 class="title is-3 has-text-centered">The Case for Diversity</h2>
+            <div class="content has-text-justified">
+                <p>
+                    Research demonstrates that diverse groups exchange a wider range of information during deliberation, make fewer factual errors, and conduct more thorough discussions than homogeneous groups (Sommers, 2006). This benefit extends beyond simple demographic representation: the concept of intersectionality, introduced by Crenshaw (1989), highlights that experiences at the intersection of multiple identities—such as being both Black and a woman—are "greater than the sum" of those individual categories. Each unique intersection brings distinct perspectives that cannot be captured by representing categories separately.
+                </p>
+                <p>
+                    The first representative from an underrepresented demographic group provides greater value to deliberation than the tenth representative from an already well-represented group. Diversimax draws inspiration from these principles, maximizing the number of unique intersectional identities represented in the panel while maintaining required demographic quotas. This ensures that marginalized groups, particularly those underrepresented in the candidates' pool, gain voice in the assembly.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-gray">
+        <div class="container is-max-desktop">
+            <h2 class="title is-3 has-text-centered">Methodology</h2>
+            <div class="content has-text-justified">
+                <p>
+                    Diversimax uses Mixed Integer Programming (MIP) to optimize for maximum diversity. The algorithm first generates intersection tables for all demographic dimensions: single dimensions (e.g., age, gender, education) as well as all combinations between them (e.g., age × gender, age × education, gender × education × income). For each intersection table \(t\), it calculates the optimal value per cell if representation were perfectly balanced:
+                </p>
+                
+                <div class="has-text-centered" style="margin: 2rem 0;">
+                    <p>\[V_{opt}^{(t)} = \frac{N}{k_t}\]</p>
+                </div>
+                
+                <p>where:</p>
+                <ul>
+                    <li>\(N\) = Total panel size (number of participants)</li>
+                    <li>\(k_t\) = Number of cells in intersection table t</li>
+                </ul>
+                
+                <p>
+                    The algorithm then creates a binary decision variable for each participant in the pool (selected = 1, not selected = 0). It optimizes this selection to: (1) satisfy all required demographic representation ranges (minimum and maximum values for each category), and (2) minimize the total deviation from the optimal balanced distribution across all intersection cells:
+                </p>
+                
+                <div class="has-text-centered" style="margin: 2rem 0; font-size: 1.1em;">
+                    <p>\[\min \sum_{t \in T} \sum_{c \in C_t} \left| n_c^{(t)} - V_{opt}^{(t)} \right|\]</p>
+                </div>
+                
+                <p>where:</p>
+                <ul>
+                    <li>\(T\) = Set of all intersection tables (all 1D, 2D, and 3D combinations)</li>
+                    <li>\(C_t\) = Set of cells in intersection table t</li>
+                    <li>\(n_c^{(t)}\) = Actual number of selected participants in cell c of table t</li>
+                </ul>
+                
+                <p>
+                    This approach minimizes empty or sparse cells across all intersections, ensuring broader representation of unique identities.
+                </p>
+            </div>
+
+            <div class="columns is-centered" style="margin-top: 3rem;">
+                <div class="column is-full">
+                    <figure class="image">
+                        <img src="images/diversimax_methodology.png" alt="Visualization of intersection table generation and diversity objective function">
+                    </figure>
+                    <p class="has-text-centered" style="margin-top: 1rem; font-style: italic;">
+                        Diversimax selects participants to minimize differences from optimal values across all intersection tables
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-white">
+        <div class="container is-max-desktop">
+            <h2 class="title is-3 has-text-centered">Summary</h2>
+            <div class="content has-text-justified">
+                <p>
+                    Diversimax is a sortition algorithm that optimizes intersectional diversity while maintaining demographic quotas. By balancing the number of participants across all demographic intersections, the algorithm ensures that underrepresented identities—particularly those at the margins of multiple categories—gain voice in deliberation.
+                </p>
+                <p>
+                    The results from Israeli municipal assemblies demonstrate that different sortition algorithms, while satisfying identical quota constraints, can produce substantially different outcomes. Diversimax has been successfully used in six assemblies in 2025. Its value may be most relevant for assemblies deliberating topics of community and belonging, such as in the Kfar Saba assembly, where the presence of diverse intersectional identities is particularly important to the quality of discussion.
+                </p>
+                <p>
+                    Future work should study the effect that choice of algorithm has on deliberation in practice. It may be that the optimal algorithm depends on the specific goals and context of each assembly.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-gray">
+        <div class="container is-max-desktop">
+            <h2 class="title is-3 has-text-centered">References</h2>
+            <div class="content">
+                <p style="text-indent: -2em; padding-left: 2em;">
+                    Crenshaw, K. (1989). Demarginalizing the Intersection of Race and Sex: A Black Feminist Critique of Antidiscrimination Doctrine, Feminist Theory and Antiracist Politics. <em>University of Chicago Legal Forum</em>, 1989(1), 139-167.
+                </p>
+                <p style="text-indent: -2em; padding-left: 2em;">
+                    Flanigan, B., Gölz, P., Gupta, A., Hennig, B., & Procaccia, A. D. (2021). Fair algorithms for selecting citizens' assemblies. <em>Nature</em>, 596(7873), 548-552.
+                </p>
+                <p style="text-indent: -2em; padding-left: 2em;">
+                    Sommers, S. R. (2006). On racial diversity and group decision making: Identifying multiple effects of racial composition on jury deliberations. <em>Journal of Personality and Social Psychology</em>, 90(4), 597-612.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/comparison-component.js"></script>
+</body>
+</html>

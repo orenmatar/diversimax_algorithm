@@ -1,0 +1,146 @@
+/* Base styles */
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #2c3e50;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --border-color: #dee2e6;
+    --section-white: #ffffff;
+    --section-gray: #f5f7fa;
+}
+
+body {
+    font-family: 'Google Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background: var(--section-white);
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 1.5rem;
+}
+
+.publication-title {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.publication-authors {
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.author-block {
+    color: white;
+}
+
+.author-block a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    transition: border-color 0.3s;
+}
+
+.author-block a:hover {
+    border-bottom-color: white;
+}
+
+/* Publication links */
+.publication-links {
+    margin-top: 1.5rem;
+}
+
+.link-block {
+    margin: 0 0.5rem;
+}
+
+.button.is-dark {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid white;
+    color: white;
+    transition: all 0.3s;
+}
+
+.button.is-dark:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Alternating section backgrounds */
+.section {
+    padding: 4rem 1.5rem;
+}
+
+.section-white {
+    background-color: var(--section-white);
+}
+
+.section-gray {
+    background-color: var(--section-gray);
+}
+
+.title.is-3 {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.content.has-text-justified {
+    text-align: justify;
+}
+
+.content p {
+    margin-bottom: 1rem;
+}
+
+/* Images */
+figure.image img {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 2rem 1rem;
+    }
+    
+    .title.is-1 {
+        font-size: 1.75rem;
+    }
+    
+    .section {
+        padding: 2rem 1rem;
+    }
+    
+    .container.is-max-widescreen {
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .title.is-1 {
+        font-size: 1.5rem;
+    }
+    
+    .publication-links {
+        margin-top: 1rem;
+    }
+}
+
+/* Container */
+.container.is-max-desktop {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.container.is-max-widescreen {
+    max-width: 1400px;
+    margin: 0 auto;
+}
