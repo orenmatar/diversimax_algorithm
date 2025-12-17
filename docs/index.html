@@ -55,7 +55,10 @@
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
                         <p>
-                            Sortition algorithms select citizens assembly panels from a pool of eligible candidates while satisfying demographic quotas that mirror the broader population. However, multiple panel compositions can satisfy the same quota constraints, requiring additional criteria to select between them. We introduce Diversimax, an algorithm that maximizes intersectional diversity - promoting representation across combinations of demographic categories (e.g., age × gender × education), not just within individual categories. Using mixed integer programming, Diversimax balances representation across all demographic intersections, minimizing disparities between well-represented and underrepresented groups. When applied to data from municipal citizens assemblies conducted in Israel, Diversimax achieves lower Gini coefficients across intersections and reduces the number of unrepresented identities compared to commonly used alternative algorithms, while maintaining identical quota compliance.
+                            Sortition algorithms select citizens assembly panels from a pool of eligible candidates while satisfying demographic quotas that mirror the broader population. However, multiple panel compositions can satisfy the same quota constraints, requiring additional criteria to select between them.
+                        </p>
+                        <p>
+                            We introduce<b> Diversimax, an algorithm that maximizes intersectional diversity, thereby promoting representation across combinations of demographic categories </b> (e.g., age × gender × education), not just within individual categories. Using mixed integer programming, Diversimax balances representation across all demographic intersections, minimizing disparities between well-represented and underrepresented groups. When applied to data from municipal citizens assemblies conducted in Israel, Diversimax achieves lower Gini coefficients across intersections and reduces the number of unrepresented identities compared to commonly used alternative algorithms, while maintaining identical quota compliance.
                         </p>
                     </div>
                 </div>
@@ -69,7 +72,7 @@
                 <h2 class="title is-3 has-text-centered">Comparing Diversimax to Leximin</h2>
                 <div class="content has-text-justified">
                     <p>
-                        Different algorithms can produce substantially different panels while satisfying identical quota constraints. To demonstrate this, we compare Diversimax to Leximin (Flanigan et al. 2021), a commonly used sortition algorithm that prioritizes "fairness." Both algorithms were applied to data from Israeli municipal citizens assemblies in Ra'anana and Kfar Saba.
+                        Different algorithms can produce substantially different panels while satisfying identical quota constraints. To demonstrate this, we compare Diversimax to Leximin (Flanigan et al. 2021), a commonly used sortition algorithm that prioritizes "fairness." Both algorithms were applied to data from Israeli municipal citizens assemblies in Ra'anana and Kfar Saba, using identical quota constraints.
                     </p>
                     <p>
                         The visualizations below show how participants are distributed across demographic intersections in panels selected by each algorithm.
@@ -116,10 +119,10 @@
             <h2 class="title is-3 has-text-centered">The Case for Diversity</h2>
             <div class="content has-text-justified">
                 <p>
-                    Research demonstrates that diverse groups exchange a wider range of information during deliberation, make fewer factual errors, and conduct more thorough discussions than homogeneous groups (Sommers, 2006). This benefit extends beyond simple demographic representation: the concept of intersectionality, introduced by Crenshaw (1989), highlights that experiences at the intersection of multiple identities—such as being both Black and a woman—are "greater than the sum" of those individual categories. Each unique intersection brings distinct perspectives that cannot be captured by representing categories separately.
+                    Research demonstrates that diverse groups exchange a wider range of information during deliberation, make fewer factual errors, and conduct more thorough discussions than homogeneous groups (Sommers, 2006). This benefit extends beyond simple demographic representation: the concept of intersectionality, introduced by Crenshaw (1989), highlights that <b> experiences at the intersection of multiple identities—such as being both Black and a woman—are "greater than the sum" of those individual categories</b>. Each unique intersection brings distinct perspectives that cannot be captured by representing categories separately.
                 </p>
                 <p>
-                    The first representative from an underrepresented demographic group provides greater value to deliberation than the tenth representative from an already well-represented group. Diversimax draws inspiration from these principles, maximizing the number of unique intersectional identities represented in the panel while maintaining required demographic quotas. This ensures that marginalized groups, particularly those underrepresented in the candidates' pool, gain voice in the assembly.
+                    We therefore adopt the assumption that the first representative from an underrepresented demographic group provides greater value to deliberation than the tenth representative from an already well-represented group. Because of this assumption, <b>Diversimax maximizes the number of unique intersectional identities represented in the panel while maintaining required demographic quotas</b>. This ensures that marginalized groups, especially those underrepresented in the candidate pool, gain a voice in the assembly.
                 </p>
             </div>
         </div>
@@ -184,10 +187,10 @@
                     Diversimax is a sortition algorithm that optimizes intersectional diversity while maintaining demographic quotas. By balancing the number of participants across all demographic intersections, the algorithm ensures that underrepresented identities—particularly those at the margins of multiple categories—gain voice in deliberation.
                 </p>
                 <p>
-                    The results from Israeli municipal assemblies demonstrate that different sortition algorithms, while satisfying identical quota constraints, can produce substantially different outcomes. Diversimax has been successfully used in six assemblies in 2025. Its value may be most relevant for assemblies deliberating topics of community and belonging, such as in the Kfar Saba assembly, where the presence of diverse intersectional identities is particularly important to the quality of discussion.
+                    The results from Israeli municipal assemblies demonstrate that different sortition algorithms, even when satisfying identical quota constraints, can produce substantially different outcomes. Diversimax has been successfully used in six assemblies in 2025, and a survey conducted by <a href="https://www.democracy3.org.il/post/%D7%90%D7%A1%D7%A4%D7%95%D7%AA-%D7%90%D7%96%D7%A8%D7%97%D7%99%D7%9D-%D7%9E%D7%94-%D7%9C%D7%9E%D7%93%D7%A0%D7%95-%D7%9E%D7%94%D7%9E%D7%A9%D7%AA%D7%AA%D7%A4%D7%99%D7%9D-%D7%A9%D7%9C%D7%A0%D7%95" target="_blank">Democracy 3.0</a> found that<b> the panel’s diversity was one of the most appealing aspects to participants and positively correlated with their support for the assembly’s methods and outcomes</b>. Diversimax’s value may be particularly relevant for assemblies deliberating topics of community and belonging, such as in the Kfar Saba assembly, where diverse intersectional identities significantly enhance the quality of discussion.
                 </p>
                 <p>
-                    Future work should study the effect that choice of algorithm has on deliberation in practice. It may be that the optimal algorithm depends on the specific goals and context of each assembly.
+                    Future work should study the effect that choice of algorithm has on deliberation in practice. The most appropriate algorithm may depend on the specific goals and context of each assembly.
                 </p>
             </div>
         </div>

@@ -107,9 +107,7 @@ class DiversityOptimizer(object):
         Minimize sum of abs
         """
         df = self.pool_members_df
-        m = (
-            mip.Model()
-        )  # for this to work you must have a gurubi license under env variable GRB_LICENSE_FILE. Otherwise specify mip solver_name
+        m = mip.Model()
         # binary variable for each person - if they are selected or not
         model_variables = []
         for person_id in df.index:

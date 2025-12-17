@@ -78,7 +78,7 @@
                 },
                 gender_quotas: {
                     rows: ["Male", "Female"],
-                    quotas: [[28, 32], [28, 32]]
+                    quotas: [[26, 34], [26, 34]]
                 }
             },
             {
