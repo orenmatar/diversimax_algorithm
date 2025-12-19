@@ -2,6 +2,10 @@
 
 **📚 [Read more about the algorithm and see comparisons →](https://orenmatar.github.io/diversimax_algorithm/)**
 
+**NOTE**: the algorithm has been merged into
+https://github.com/sortitionfoundation/sortition-algorithms
+which offers more sortition algorithms, and more support in pre-processing, validating the data etc. It is reccomended to use that repo.
+
 ## Overview
 
 DiversiMax is a sortition algorithm that selects citizen assembly panels by maximizing intersectional diversity while maintaining demographic quotas. The algorithm optimizes for diversity across all combinations of demographic categories (e.g., age × gender × education), not just within individual categories.
